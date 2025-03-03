@@ -411,32 +411,7 @@
             color: white;
         }
 
-        /* Formularios */
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border-radius: var(--radius);
-            border: 1px solid #ddd;
-            font-family: var(--font-primary);
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
-        }
+       
 
         /* ===== HEADER ===== */
         .header {
@@ -1002,6 +977,104 @@
             letter-spacing: 1px;
         }
 
+/* ===== SECCIÓN CÓMO HACER LA COMPRA ===== */
+.purchase-process {
+    padding: 1rem 0;
+    background-color: var(--light);
+    text-align: center;
+}
+
+.purchase-process .section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    
+}
+
+.purchase-process .benefits {
+    display: inline-block;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.purchase-process .benefit-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.purchase-process .benefit-item i {
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+    color: var(--primary);
+}
+
+
+/* ===== SECCIÓN DE CONTACTO ===== */
+.contact-section {
+    padding: 3rem 0;
+    background-color: var(--light);
+    text-align: center;
+    background-color: #324970;
+    color: white;
+}
+
+.contact-section .section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact-section .input-group {
+    margin-bottom: 1rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-section textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-section .button {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-section .button:hover {
+    background-color: #1ebe5d;
+}
+
+
+
+
+
+
+
+
         
     </style>
 </head>
@@ -1192,7 +1265,7 @@
                     
                     <div class="stats">
                         <div class="stat-item">
-                            <div class="stat-number">100+</div>
+                            <div class="stat-number">97+</div>
                             <div class="stat-label">Clientes Satisfechos</div>
                         </div>
                         <div class="stat-item">
@@ -1200,8 +1273,8 @@
                             <div class="stat-label">Aumento en Conversiones</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">2h</div>
-                            <div class="stat-label">Tiempo Promedio</div>
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">método aprobado</div>
                         </div>
                     </div>
                 </div>
@@ -1254,63 +1327,50 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title text-center mb-5" data-aos="fade-up"> Tienes dudas? ¡Contáctanos!</h2>
-            
-            <div class="contact-grid">
-                <div class="contact-form" data-aos="fade-right">
-                    <div class="card">
-                        <form id="whatsapp-form">
-                            <div class="form-group">
-                                <label for="name" class="form-label">Nombre Completo</label>
-                                <input type="text" id="name" class="form-control" placeholder="Tu nombre" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="form-label">Correo Electrónico</label>
-                                <input type="email" id="email" class="form-control" placeholder="tucorreo@ejemplo.com" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message" class="form-label">Mensaje (Opcional)</label>
-                                <textarea id="message" class="form-control" rows="3" placeholder="¿Tienes alguna pregunta?"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-full">¡Quiero Crear Landing Pages con IA!</button>
-                          
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="contact-info" data-aos="fade-left">
-                    <h3 class="mb-3">Información de Contacto</h3>
-                    
-                                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <!-- CAMBIA ESTE NÚMERO POR EL TUYO -->
-                            +57 3154483584
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <!-- CAMBIA ESTE EMAIL POR EL TUYO -->
-                            juanosoriov93@gmail.com
-                        </div>
-                    </div>
-                    
-                    
-                </div>
+   
+<!-- SECCIÓN DE CONTACTO -->
+<section class="contact-section" >
+    <div class="container text-center">
+        <h2 class="section-title">¿Tienes dudas? ¡Contáctanos!</h2>
+        <p class="mb-4">Escríbenos y te responderemos lo antes posible.</p>
+
+        <form id="contact-form">
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Tu nombre" required>
             </div>
+            <div class="input-group">
+                <textarea id="message" placeholder="Mensaje opcional"></textarea>
+            </div>
+            <button type="submit" class="button">Contactar por WhatsApp</button>
+        </form>
+    </div>
+</section>
+
+<br><br>
+
+
+
+<!-- SECCIÓN CÓMO HACER LA COMPRA -->
+<section class="purchase-process" id="purchase">
+    <div class="container text-center">
+        <h2 class="section-title" id="contact">¿Cómo Hacer la Compra?</h2>
+        <p class="mb-1">Diligencia el formulario, selecciona tu forma de pago preferida  y recibe tu eBook al instante en tu e-mail.</p>
+       <p style="color: #4f46e5;">Paga en tu moneda <i class="fas fa-lock"></i> Pago 100% seguro</p>
+</div>
+            <br>
+
+        <!-- IFRAME DE HOTMART -->
+        <div class="payment-frame">
+            <iframe src="https://pay.hotmart.com/K98450352T" width="100%" height="600px"></iframe>
         </div>
-    </section>
+    </div>
+</section>
+
+
+
+
+
+
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -1338,11 +1398,7 @@
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP -->
-    <a href="https://wa.me/543154483584" class="floating-whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
+    
     
 
     <!-- AOS ANIMATION LIBRARY -->
@@ -1359,25 +1415,25 @@
         document.getElementById('current-year').textContent = new Date().getFullYear();
         
        
-        // Formulario de WhatsApp
-        document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
-            
-            // CAMBIA ESTE NÚMERO POR TU NÚMERO DE WHATSAPP CON CÓDIGO DE PAÍS
-            const whatsappNumber = '3154483584';
-            
-            const whatsappMessage = `Hola, soy ${name}. Email: ${email}. Estoy interesado en tu curso de Landing Pages con IA. ${message}`;
-            
-            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-            
-            window.open(whatsappUrl, '_blank');
-        });
-        
+        // SECCIÓN DE CONTACTO - ENVÍO A WHATSAPP
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let message = document.getElementById("message").value.trim();
+    let phone = "573154483584"; // Reemplázalo con tu número de WhatsApp
+
+    if (name === "") {
+        alert("Por favor, ingresa tu nombre.");
+        return;
+    }
+
+    let whatsappMessage = `Hola, soy ${name}. ${message ? "Mi consulta es: " + message : "Quisiera más información."}`;
+    let whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappURL, "_blank");
+});
+
       
         
        
