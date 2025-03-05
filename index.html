@@ -33,13 +33,13 @@
         /* ===== VARIABLES ===== */
         :root {
             /* COLORES PRINCIPALES - PUEDES CAMBIAR ESTOS VALORES */
-            --primary: #9e4dea;
-            --primary-dark: #7e46e5;
+            --primary: #232025;
+            --primary-dark: #1a191d;
             --secondary: #f43f5e;
-            --secondary-dark: #e11d48;
-            --accent: #8b5cf6;
+            --secondary-dark: #edfa02;
+            --accent: #332d3f;
             --dark: #1e293b;
-            --light: #f8fafc;
+            --light: #fcfcf8;
             --gray: #64748b;
             --success: #10b981;
             
@@ -431,24 +431,26 @@
             position: relative;
             padding: 4rem 0;
             overflow: hidden;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg , var(--primary), rgb(122, 122, 15));
+
             color: white;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.641); /* Sombra negra al texto */
         }
 
         .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
-            background-size: cover;
-            background-position: center;
-            opacity: 0.3; 
-            
-        }
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; 
+    filter: grayscale(100%); /* Aplica escala de grises */
+}
+
 
         .hero-content {
             position: relative;
@@ -481,13 +483,13 @@
            
             font-size: 1.2rem;
             margin-right: 0.5rem;
-            color: #d209fe;
+            color: #c3c3c3;
         }
 
         .price-current {
             font-size: 1.5rem;
             font-weight: 700;
-            color: white;
+            color: var(--secondary-dark);
         }
 
         /* ===== BENEFICIOS SECTION ===== */
@@ -1000,7 +1002,7 @@
     padding: 3rem 0;
     background-color: var(--light);
     text-align: center;
-    background-color: #324970;
+    background-color: var(--primary);
     color: white;
 }
 
@@ -1066,20 +1068,20 @@
             <div class="hero-content ">
 
                 <div style="text-align: left;">
-                <h1 class="title" data-aos="fade-up">Crea tu pg web  en 2 horas usando mag<span style="color: #ff01ee;">IA</span> </h1>
-                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">🪄Y atrae clientes <strong style="color: #ff01ee;" >calificados</strong> a tu negocio o servicio </p>
+                <h1 class="title" data-aos="fade-up">Crea tu pg web  en 2 horas usando mag<span style="color: var(--secondary-dark);">IA</span> </h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">🪄Y atrae clientes <strong style="color: var(--secondary-dark); " >calificados</strong> a tu negocio o servicio </p>
                 
                
                
                
                 <div class="price-tag" data-aos="zoom-in" data-aos-delay="200">
-                <p style="font-style: italic;">"Te revelaré un <strong style="color: #ff01ee;" >paso a paso sencillo</strong> para crear paginas web atractivas como esta con la ayuda de la inteligencia artificial"</p>
+                <p style="font-style: italic;">"Te revelaré un <strong style="color: var(--secondary-dark);" >paso a paso sencillo</strong> para crear paginas web atractivas como esta con la ayuda de la inteligencia artificial"</p>
                  
                 </div>    
                 <br>
                   
                     <span class="price-original">Precio regular $20</span> <br>
-                    <span class="price-current"  style="color: #f7ff01;">Hoy Por Solo $7</span>
+                    <span class="price-current"  >Hoy Por Solo $7</span>
                     <p style="font-size: 0.8rem;">Promoción por tiempo limitado⌛</p>
               
               
