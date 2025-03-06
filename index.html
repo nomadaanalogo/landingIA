@@ -362,7 +362,7 @@
 
         /* Tarjetas */
         .card {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgb(255, 255, 255);
             backdrop-filter: blur(10px);
             border-radius: var(--radius);
             padding: 2rem;
@@ -1051,10 +1051,87 @@
 
 
 
+        .slider-container {
+            position:relative;
+            width: 100%;
+            max-width: 800px; /* Ancho máximo */
+            height: 500px; /* Altura del contenedor */
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            justify-content: center; 
+            align-items: center; 
+            margin: 0 auto;
+        }
+
+        .before-image,
+        .after-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .before-image {
+            z-index: 1;
+            background-image: url('desp.png'); /* Imagen del antes */
+        }
+
+        .after-image {
+            z-index: 2;
+            background-image: url('antes.png'); /* Imagen del después */
+            width: 50%;
+            border-right: 3px solid white;
+        }
+
+        .slider {
+            position: absolute;
+            z-index: 3;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 40px;
+            transform: translateX(-50%); /* Centra el slider */
+            cursor: ew-resize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-button {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(208, 0, 194);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .slider-icon {
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+      
 
 
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .slider-container {
+                height: 350px;
+            }
+        }
 
-
+        @media (max-width: 480px) {
+            .slider-container {
+                height: 250px;
+            }
+        }
 
         
     </style>
@@ -1068,7 +1145,7 @@
             <div class="hero-content ">
 
                 <div style="text-align: left;">
-                <h1 class="title" data-aos="fade-up">Crea tu pg web  en 2 horas usando mag<span style="color: var(--secondary-dark);">IA</span> </h1>
+                <h1 class="title" data-aos="fade-up">Crea tu pg web <span style="color: var(--secondary-dark);">en minutos</span> usando mag<span style="color: var(--secondary-dark);">IA</span> </h1>
                 <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">🪄Y atrae clientes <strong style="color: var(--secondary-dark); " >calificados</strong> a tu negocio o servicio </p>
                 
                
@@ -1089,8 +1166,8 @@
                 <br>
                 
                 <a href="https://pay.hotmart.com/K98450352T" style="background-color: #d000ff; color: rgb(255, 255, 255) ;" class="btn btn-secondary btn-lg" data-aos="fade-up" data-aos-delay="400"> Adquirir eBook <i class="fa-solid fa-arrow-right"></i></a>
-               <br><br>
-                    <p style="font-size: 0.8rem;">🔒Pago seguro</p>
+                <br><br>
+                <p style="font-size: 0.8rem;">🔒Pago seguro</p>
                 <p style="font-size: 0.8rem;">📥Recibes el PDF en tu e-mail</p>
                 <p style="font-size: 0.8rem;">🛡️Garantía de satisfaccion 7 días</p>
 
@@ -1099,11 +1176,39 @@
     </section>
 
 
+<section class="benefits">
+
+
+    
+   
+    <div class="container grid grid-cols-1 md:grid-cols-2 items-center gap-4" style="justify-content: center; 
+            align-items: center; ">
+        <h1>Las páginas que hace chat GTP <span style="color: #ac0ecf;">/</span> Las páginas que podrías crear con nuestra gu<span style="color: #ac0ecf;">IA...</span></h1>
+        
+        <div class="slider-container">
+          <div class="before-image"></div>
+          <div class="after-image"></div>
+          
+       
+          
+          <div class="slider" id="slider">
+            <div class="slider-button">
+              <div class="slider-icon">⟷</div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+
+
+
+
     
 
 
     <!-- BENEFICIOS SECTION -->
-    <section class="benefits" id="benefits">
+    <section class="benefits" id="benefits" style="background-color:#460156">
         <div class="container">
             
            
@@ -1190,7 +1295,22 @@
     </section>
     
 
+    <section class="benefits" data-aos="fade-up" >
+        <div class="container">
+        <h2 style="color: #d000ff ;">Transforma tu negocio/servicio con una página que venda por ti.</h2>
+        <p>
+            🟣Te guíamos paso a paso y sin complicaciones. Para que logres resultados como estos, gracias a la magIA:
+        </p>
+        <br>
+       
+        <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+            <img src="ej1.png" alt="Vista previa del ebook" style="width: 30%; border-radius: 10px; box-shadow: 0px 8px 12px rgba(70, 1, 86, 0.5);">
 
+            <img src="ej2.png" alt="Ejemplo de landing page" style="width: 30%; border-radius: 10px;box-shadow: 0px 8px 12px rgba(70, 1, 86, 0.5);">
+            <img src="ej3.png" alt="Resultados de conversión" style="width: 30%; border-radius: 10px;box-shadow: 0px 8px 12px rgba(70, 1, 86, 0.5);">
+        </div>
+    </div>
+    </section>
 
 
 
@@ -1391,6 +1511,86 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
                 });
             });
         });
+
+  // Lazy loading para imágenes
+  if ('loading' in HTMLImageElement.prototype) {
+                // El navegador soporta lazy loading nativo
+                const images = document.querySelectorAll('img[loading="lazy"]');
+                images.forEach(img => {
+                    img.src = img.dataset.src;
+                });
+            } else {
+                // Fallback para navegadores que no soportan lazy loading nativo
+                const script = document.createElement('script');
+                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+                document.body.appendChild(script);
+            }
+
+// Llamar a la función para aplicar lazy loading cuando la página esté cargada
+document.addEventListener("DOMContentLoaded", function() {
+    aplicarLazyLoading();
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+      const sliderContainer = document.querySelector('.slider-container');
+      const slider = document.getElementById('slider');
+      const afterImage = document.querySelector('.after-image');
+      
+      let isDown = false;
+      
+      // Handle mouse events
+      slider.addEventListener('mousedown', () => {
+        isDown = true;
+      });
+      
+      window.addEventListener('mouseup', () => {
+        isDown = false;
+      });
+      
+      window.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        handleMove(e);
+      });
+      
+      // Handle touch events
+      slider.addEventListener('touchstart', () => {
+        isDown = true;
+      });
+      
+      window.addEventListener('touchend', () => {
+        isDown = false;
+      });
+      
+      window.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        handleMove(e.touches[0]);
+      });
+      
+      // Direct click/touch on container
+      sliderContainer.addEventListener('click', (e) => {
+        handleMove(e);
+      });
+      
+      function handleMove(e) {
+        e.preventDefault();
+        
+        const containerRect = sliderContainer.getBoundingClientRect();
+        const x = e.clientX - containerRect.left;
+        
+        // Calculate percentage
+        let percent = (x / containerRect.width) * 100;
+        
+        // Constrain percentage between 0 and 100
+        percent = Math.max(0, Math.min(100, percent));
+        
+        // Update slider and after image position
+        slider.style.left = `${percent}%`;
+        afterImage.style.width = `${percent}%`;
+      }
+    });
+
+
     </script>
 </body>
 </html>
