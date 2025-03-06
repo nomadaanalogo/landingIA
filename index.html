@@ -1050,89 +1050,6 @@
 }
 
 
-
-        .slider-container {
-            position:relative;
-            width: 100%;
-            max-width: 800px; /* Ancho máximo */
-            height: 500px; /* Altura del contenedor */
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            justify-content: center; 
-            align-items: center; 
-            margin: 0 auto;
-        }
-
-        .before-image,
-        .after-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .before-image {
-            z-index: 1;
-            background-image: url('desp.png'); /* Imagen del antes */
-        }
-
-        .after-image {
-            z-index: 2;
-            background-image: url('antes.png'); /* Imagen del después */
-            width: 50%;
-            border-right: 3px solid white;
-        }
-
-        .slider {
-            position: absolute;
-            z-index: 3;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 40px;
-            transform: translateX(-50%); /* Centra el slider */
-            cursor: ew-resize;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .slider-button {
-            width: 40px;
-            height: 40px;
-            background-color: rgb(208, 0, 194);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        .slider-icon {
-            color: #ffffff;
-            font-size: 20px;
-        }
-
-      
-
-
-        /* Responsividad */
-        @media (max-width: 768px) {
-            .slider-container {
-                height: 350px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .slider-container {
-                height: 250px;
-            }
-        }
-
         
     </style>
 </head>
@@ -1176,35 +1093,7 @@
     </section>
 
 
-<section class="benefits">
-
-
-    
-   
-    <div class="container grid grid-cols-1 md:grid-cols-2 items-center gap-4" style="justify-content: center; 
-            align-items: center; ">
-        <h1>Las páginas que hace chat GTP <span style="color: #ac0ecf;">/</span> Las páginas que podrías crear con nuestra gu<span style="color: #ac0ecf;">IA...</span></h1>
-        
-        <div class="slider-container">
-          <div class="before-image"></div>
-          <div class="after-image"></div>
-          
-       
-          
-          <div class="slider" id="slider">
-            <div class="slider-button">
-              <div class="slider-icon">⟷</div>
-            </div>
-          </div>
-        </div>
-      </div>
-</section>
-
-
-
-
-
-    
+  
 
 
     <!-- BENEFICIOS SECTION -->
@@ -1532,63 +1421,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-      const sliderContainer = document.querySelector('.slider-container');
-      const slider = document.getElementById('slider');
-      const afterImage = document.querySelector('.after-image');
-      
-      let isDown = false;
-      
-      // Handle mouse events
-      slider.addEventListener('mousedown', () => {
-        isDown = true;
-      });
-      
-      window.addEventListener('mouseup', () => {
-        isDown = false;
-      });
-      
-      window.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        handleMove(e);
-      });
-      
-      // Handle touch events
-      slider.addEventListener('touchstart', () => {
-        isDown = true;
-      });
-      
-      window.addEventListener('touchend', () => {
-        isDown = false;
-      });
-      
-      window.addEventListener('touchmove', (e) => {
-        if (!isDown) return;
-        handleMove(e.touches[0]);
-      });
-      
-      // Direct click/touch on container
-      sliderContainer.addEventListener('click', (e) => {
-        handleMove(e);
-      });
-      
-      function handleMove(e) {
-        e.preventDefault();
-        
-        const containerRect = sliderContainer.getBoundingClientRect();
-        const x = e.clientX - containerRect.left;
-        
-        // Calculate percentage
-        let percent = (x / containerRect.width) * 100;
-        
-        // Constrain percentage between 0 and 100
-        percent = Math.max(0, Math.min(100, percent));
-        
-        // Update slider and after image position
-        slider.style.left = `${percent}%`;
-        afterImage.style.width = `${percent}%`;
-      }
-    });
 
 
     </script>
